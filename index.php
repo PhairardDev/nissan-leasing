@@ -71,11 +71,9 @@ if(isset($_POST['submit'])){
 
     function calInterest($installment,$eff,$overDate){
         $interarstCost = ($installment*$eff*$overDate)/365;
-        return $interarstCost;
+        $result = number_format($interarstCost,2,'.',',');
+        return $result;
     }
-
-
-
 ?>
       <div class="row">
       <table class="my-4 table table-striped">
